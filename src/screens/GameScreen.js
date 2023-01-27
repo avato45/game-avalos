@@ -4,7 +4,7 @@ import Card from "../components/Card"
 
 import colors from "../constants/colors"
 
-const GameScreen = ({ handleResult }) => {
+const GameScreen = () => {
   const [currentGuess, setCurrentGuess] = useState()
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const GameScreen = ({ handleResult }) => {
       <Card newStyles={styles.buttonContainer}>
             <Button
                 title="Lower"
-                onPress={() => handleResult("lower", currentGuess)}
+                onPress={() => console.log("Lower")}
             />
             <Button
                 title="Higher"
-                onPress={() => handleResult("higher", currentGuess)}
+                onPress={() => console.log("Higher")}
             />
         </Card>
     </View>

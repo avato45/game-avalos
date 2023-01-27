@@ -49,7 +49,7 @@ const StartGameScreen = ({onStartGame}) => {
                             blurOnSubmit
                             autoCapitalize="none"
                             autoCorrect={false}
-                            KeyboardType="numeric"
+                            keyboardType="numeric"
                             maxLength={2}
                             value={value}
                             onChangeText={handleInput}
