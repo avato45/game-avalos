@@ -4,12 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import Header from './src/components/Header';
 import StartGameScreen from './src/screens/StartGameSreen';
+import GameScreen from './src/screens/GameScreen';
 
 export default function App() {
   const [loaded] = useFonts({
     SatisfyRegular: require("./src/assets/fonts/Satisfy-Regular.ttf"),
   })
-  const [userNumber, setuserNumber] = useState()
+  const [userNumber, setUserNumber] = useState()
 
   const handleStartGame = selectedNumber => {
     setUserNumber(selectedNumber)
@@ -17,10 +18,8 @@ export default function App() {
 
   let content = <StartGameScreen onStartGame={handleStartGame} />
 
-  if (userNumber && winOrLose === true) {
-    content = <ResultScreen result={result} />
-  } else if (userNumber) {
-    content = <GameScreen handleResult={handleFinishGame} />
+  if (userNumber) {
+    content = <GameScreen />
   }
 
   if (!loaded) {
@@ -33,7 +32,7 @@ export default function App() {
       <Header
       title={"Guess the Number"}
       newStyles={{fontFamily: "SatisfyRegular"}}/>
-      <StartGameScreen />
+      {content}
     </View>
   );
 }
