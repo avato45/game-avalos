@@ -5,6 +5,7 @@ import {
     Text,
     View,
     KeyboardAvoidingView,
+    Keyboard,
     TouchableWithoutFeedback,
     ScrollView
 } from "react-native"

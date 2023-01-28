@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import Header from './src/components/Header';
 import StartGameScreen from './src/screens/StartGameSreen';
